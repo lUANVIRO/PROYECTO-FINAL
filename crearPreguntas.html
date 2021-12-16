@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cuestionario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+	<div class="container">
+		<h1>CREAR CUESTIONARIO</h1>
+		
+		<form class="form">
+			<form action="">
+                <div class="contenido" id = "principal">
+                    <p>
+                        <input type="text" style="width:400px;height:20px" name="pregunta" class="form-control" id="pregunta" placeholder="Insertar Pregunta" required>
+                    </p> 
+                    <p>
+                        <label>PREGUNTA NÚMERO </label>
+                        <input type="text" style="width:50px;height:20px" name="pregunta" class="form-control" id="idPregunta" placeholder="número de pregunta" required>
+                        
+                    </p> 
+                    <p>
+                        <div class="preguntaa" id = "tipo">
+                            <input type="radio" name="pregunta" id="RadioAbierta" onclick="PreguntaAbierta()"> Abierta
+                            <input type="radio" name="pregunta" id="RadioCerrada" onclick="PreguntaCerrada()"> Cerrada
+                        </div>
+                    
+                        <div class="preguntamulti" id = "preguntacerrada" style="display:none;">
+                            <p>
+                                    <input type="text" name="" id="opcion1" placeholder="Insertar Opcion 1"> 
+                                <p>
+                                    <input type="text" name="" id="opcion2" placeholder="Insertar Opcion 2"> 
+                                </p>
+                                <p>
+                                    <input type="text" name="" id="opcion3" placeholder="Insertar Opcion 3">  
+                                </p>
+                                <button type="submit" id="btnRegistrarRC">Guardar Respuestas</button>
+                            </p>  
+                        </div>
+        
+                    <div class="preguntaabierta" id = "preguntaabierta" style="display:none;">
+                        
+                            <input type="text" style="width:370px;height:20px" name="respAbierta" class="form-control" id="respAbierta" placeholder="Escribe aquí la respuesta" required>
+                            <button type="submit" id="btnRegistrarRA">Guardar Respuesta</button>
+                        
+                    </div>
+                    <div id="btnAgregarMayor1">
+                        <button type="submit" id="btnRegistrarP">Guardar Pregunta</button>
+                    </div>
+                    <button id="btnAgregar" type="button">Agregar Pregunta</button>
+                </div>
+                <button id="btnAsignar" type="button">Asignar Alumnos</button>
+                <textarea id="outputBox"></textarea>
+			</form>
+            
+		</form>	
+
+
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="crearP.js"></script>
+  <script  src="crearR.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
